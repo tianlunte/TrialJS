@@ -134,6 +134,16 @@ let dahuaxiyou = new Movie("Dahua Xiyou", "Stephan Chou", 160);
 dahuaxiyou.desc();
 /** constructor functions */
 
+/** primitive object wrappers
+ 1). Primitives are still primitive. A single value, as desired.
+ 2). The language allows access to methods and properties of strings, numbers, booleans and symbols.
+ 3). When this happens, a special “object wrapper” is created that provides the extra functionality, and then is destroyed.
+ * */
+let textChinese = "Chinese";
+
+printText(textChinese.toUpperCase());
+/** primitive object wrappers */
+
 function printText(text) {
   process.stdout.write(text + "\n");
 }
