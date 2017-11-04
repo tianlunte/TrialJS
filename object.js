@@ -55,6 +55,25 @@ let benz = Object.assign({}, bmw);
 printObject(benz);
 /* copy object */
 
+/** object method */
+let manager = {
+  name: "LaoWang",
+  race: "Chinese",
+  age:  36,
+
+  execute: function() {
+    printText(`Manager ${this.name} is executing`);
+  },
+
+  report() {
+    printText(`Manager ${this.name} is ${this.race} and he is ${this.age} years old`);
+  }
+};
+
+manager.execute();
+manager.report();
+/** object method */
+
 function printText(text) {
   process.stdout.write(text + "\n");
 }
