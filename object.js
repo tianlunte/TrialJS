@@ -1,7 +1,13 @@
 "use strict";
 
-/*
+/**
   The equality == and strict equality === operators for objects work exactly the same.
+
+ To make user.hi() calls work, JavaScript uses a trick – the dot '.' returns not a function,
+ but a value of the special Reference Type
+ //
+ Any other operation like assignment hi = user.hi discards the reference type as a whole,
+ takes the value of user.hi (a function) and passes it on
 */
 
 let emptyObjectA = new Object();
