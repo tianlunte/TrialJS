@@ -80,6 +80,31 @@ manager.execute();
 manager.report();
 /** object method */
 
+/** to primitive conversion
+ Call obj[Symbol.toPrimitive](hint) if the method exists,
+ //
+ Otherwise if hint is "string"
+ try obj.toString() and obj.valueOf(), whatever exists.
+ //
+ Otherwise if hint is "number" or "default"
+ try obj.valueOf() and obj.toString(), whatever exists.
+
+ refer to: https://javascript.info/object-toprimitive
+ * */
+
+let carBmw = {
+  name: "BMW",
+  price: 120,
+
+  [Symbol.toPrimitive](hint) {
+    printText(hint);
+    return hint === "string" ? this.name : this.price;
+  }
+};
+
+printText(carBmw);
+/** to primitive conversion */
+
 function printText(text) {
   process.stdout.write(text + "\n");
 }
