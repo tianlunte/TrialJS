@@ -115,13 +115,17 @@ printText(String(carBmw));
  * */
 
 function Movie(name, director, length = 120) {
+    // this = {};  this is done implicitly
+
     this.name = name;
     this.director = director;
     this.length = length;
 
     this.desc = function() {
         printText(`${this.name} is directed by ${this.director} and is ${this.length} minutes long`);
-    }
+    };
+
+    // return this;  this is also done implicitly
 }
 
 let dahuaxiyou = new Movie("Dahua Xiyou", "Stephan Chou", 160);
