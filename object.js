@@ -102,8 +102,31 @@ let carBmw = {
   }
 };
 
-printText(carBmw);
+printText(String(carBmw));
 /** to primitive conversion */
+
+/** constructor functions
+ They are named with capital letter first.
+ They should be executed only with "new" operator.
+
+ 1). A new empty object is created and assigned to this.
+ 2). The function body executes. Usually it modifies this, adds new properties to it.
+ 3). The value of this is returned.
+ * */
+
+function Movie(name, director, length = 120) {
+    this.name = name;
+    this.director = director;
+    this.length = length;
+
+    this.desc = function() {
+        printText(`${this.name} is directed by ${this.director} and is ${this.length} minutes long`);
+    }
+}
+
+let dahuaxiyou = new Movie("Dahua Xiyou", "Stephan Chou", 160);
+dahuaxiyou.desc();
+/** constructor functions */
 
 function printText(text) {
   process.stdout.write(text + "\n");
