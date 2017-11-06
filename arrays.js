@@ -4,6 +4,10 @@
 
 "use strict";
 
+/**
+ * an Array is essentially an Object, with access to an ordered collection of data
+ * */
+
 /** two ways to declare an array */
 let arrayA = new Array();
 let arrayB = [];
