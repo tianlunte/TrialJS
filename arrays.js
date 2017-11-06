@@ -10,6 +10,9 @@ let arrayB = [];
 let arrayC = ["Apple", "Google", "Facebook", "Amazon", "Uber", "Airbnb"];
 
 
+/** basic usage */
+printText(`second company is : ${arrayC[1]}`);
+
 
 /** looping */
 for (let company of arrayC) {
