@@ -14,7 +14,9 @@ let arrayB = [];
 let arrayC = ["Apple", "Google", "Facebook", "Amazon", "Uber", "Airbnb"];
 
 
-/** basic usage */
+/** basic usage
+ *  the simplest way to clear the array is: arr.length = 0;
+ * */
 printText(`second company is : ${arrayC[1]}`);
 
 
