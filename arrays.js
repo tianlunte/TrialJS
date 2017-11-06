@@ -20,7 +20,7 @@ for (let company of arrayC) {
 }
 
 
-/** array as a queue */
+/** array as a queue/stack */
 let queue = [];
 queue.push("Alibaba");
 queue.push("Tecent");
